@@ -1,0 +1,13 @@
+telegramdan  import qilish telegram.ext  dan yangilash import ApplicationBuilder , CommandHandler , ContextTypes 
+     
+
+
+async  def  salom ( yangilanish :  Yangilash ,  kontekst :  ContextTypes . DEFAULT_TYPE )  ->  Yo'q : 
+    yangilanishni kuting  . xabar . reply_text ( f 'Salom { yangilash . samarali_foydalanuvchi . ism_ism } ' )
+
+
+ilova  =  ApplicationBuilder () . token (5879313391:AAGBJfiGwi-R6JL-IuGAok2ufkAdJXNxzD8) . qurmoq ()
+
+ilova . add_handler ( CommandHandler ( "salom" ,  salom ))
+
+ilova . run_polling ()
